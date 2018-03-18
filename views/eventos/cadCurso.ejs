@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de Cursos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <p>Bem-vindo,
+            <%- usuario.nome %>
+        </p>
+        <h1>Cadastro de Cursos</h1>
+        <h4>Forneça os dados para o cadastro</h4>
+    </header>
+    <section>
+        <form action="/novoCurso" method="post">
+            Codigo:
+            <br />
+            <input type="text" name="curso[codigo]" class="form-control" placeholder="Codigo">
+            
+            <br> Descricao:
+            <br />
+            <input type="text" name="curso[descricao]" class="form-control" placeholder="Descricao">
+
+            <br> Carga Horaria:
+            <br />
+            <input type="text" name="curso[cargaHoraria]" class="form-control" placeholder="Carga horaria">
+            
+            <br>
+            <label for="categoria">Categoria</label>
+            <select class="form-control" name="curso[categoria]" id="categoria">
+                <option>Design</option>
+                <option>Tecnologia</option>
+                <option>Engenharia</option>
+                <option>Medicina</option>
+            </select>
+
+            <button class="btn btn-primary" type="submit">Salvar</button>
+        </form>
+    </section>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</html>

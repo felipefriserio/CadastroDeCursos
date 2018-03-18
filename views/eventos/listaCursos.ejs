@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de Cursos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <p>Bem-vindo,
+            <%- usuario.nome %>
+        </p>
+        <h1>Lista de Eventos</h1>
+        <h4>Selecione uma opção na lista para executá-la</h4>
+    </header>
+    <section>
+        <!--será implementado em breve-->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Descrição</th>
+                    <th>Carga horaria</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cursos.forEach(function(curso, index) { %>
+                    <tr>
+                        <td>
+                            <%= curso.codigo %>
+                        </td>
+                        <td>
+                            <%= curso.descricao %>
+                        </td>
+                        <td>
+                            <%= curso.cargaHoraria %>
+                        </td>
+                        <td>
+                            <%= curso.categoria %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+
+
+    </section>
+    <footer>
+        <small>Sistema de Cadastro de Eventos e Convidados</small>
+    </footer>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</html>
